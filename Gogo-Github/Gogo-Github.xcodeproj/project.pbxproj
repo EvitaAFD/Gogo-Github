@@ -13,6 +13,7 @@
 		507516911E92B1DA00607A0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5075168F1E92B1DA00607A0D /* LaunchScreen.storyboard */; };
 		507516991E92C91000607A0D /* GitHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507516981E92C91000607A0D /* GitHub.swift */; };
 		5075169E1E92CE6D00607A0D /* GitHubAuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5075169D1E92CE6D00607A0D /* GitHubAuthController.swift */; };
+		507516A01E92EC2700607A0D /* FoundationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5075169F1E92EC2700607A0D /* FoundationExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		507516921E92B1DA00607A0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		507516981E92C91000607A0D /* GitHub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHub.swift; sourceTree = "<group>"; };
 		5075169D1E92CE6D00607A0D /* GitHubAuthController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubAuthController.swift; sourceTree = "<group>"; };
+		5075169F1E92EC2700607A0D /* FoundationExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundationExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 		5075169A1E92C92D00607A0D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5075169F1E92EC2700607A0D /* FoundationExtensions.swift */,
 			);
 			name = Model;
 			path = "Gogo-Github";
@@ -165,6 +168,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				507516A01E92EC2700607A0D /* FoundationExtensions.swift in Sources */,
 				507516991E92C91000607A0D /* GitHub.swift in Sources */,
 				5075169E1E92CE6D00607A0D /* GitHubAuthController.swift in Sources */,
 				507516871E92B1DA00607A0D /* AppDelegate.swift in Sources */,

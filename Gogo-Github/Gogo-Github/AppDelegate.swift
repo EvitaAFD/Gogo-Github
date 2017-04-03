@@ -18,12 +18,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         return true
     }
-    
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
         
         let code = try? GitHub.shared.getCodeFrom(url: url)
         
         print(code)
+        
+        GitHub.shared.tokenRequestFor(url: url, saveOptions: .userDefaults) { (success) in
+            if success {
+                print("Yay! Access token!")
+            } else {
+                print("Oh nooo!! No success.")
+            }
+        }
         
         return true
     }
