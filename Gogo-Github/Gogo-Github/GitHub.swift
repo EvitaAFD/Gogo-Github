@@ -21,9 +21,6 @@ enum SaveOptions {
 }
 
 class GitHub {
-
-    let gitHubClientID = "46fedd5f05e0fa84bb6f"
-    let gitHubClientSecret = "46c6d589b2f108bc19651847027758284ef052f2"
     
     static let shared = GitHub()
     
@@ -64,7 +61,7 @@ class GitHub {
         do {
             let code = try self.getCodeFrom(url: url)
             
-            let requestString = "\(kOAuthBaseURLString)access_token?client_id=\(gitHubClientID)&client_secret=\(gitHubClientSecret)&code=\(code)"
+            let requestString = "\(kOAuthBaseURLString)access_token?client_id=\(gitHubCredentials.shared.gitHubClientID)&client_secret=\(gitHubCredentials.shared.gitHubClientSecret)&code=\(code)"
             
             if let requestURL = URL(string: requestString) {
                 
