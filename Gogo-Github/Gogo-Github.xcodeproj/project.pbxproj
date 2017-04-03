@@ -1,0 +1,342 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		507516871E92B1DA00607A0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507516861E92B1DA00607A0D /* AppDelegate.swift */; };
+		507516891E92B1DA00607A0D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507516881E92B1DA00607A0D /* ViewController.swift */; };
+		5075168C1E92B1DA00607A0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5075168A1E92B1DA00607A0D /* Main.storyboard */; };
+		5075168E1E92B1DA00607A0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5075168D1E92B1DA00607A0D /* Assets.xcassets */; };
+		507516911E92B1DA00607A0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5075168F1E92B1DA00607A0D /* LaunchScreen.storyboard */; };
+		507516991E92C91000607A0D /* GitHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507516981E92C91000607A0D /* GitHub.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		507516831E92B1DA00607A0D /* Gogo-Github.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gogo-Github.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		507516861E92B1DA00607A0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		507516881E92B1DA00607A0D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = "Gogo-Github/ViewController.swift"; sourceTree = "<group>"; };
+		5075168B1E92B1DA00607A0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5075168D1E92B1DA00607A0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		507516901E92B1DA00607A0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		507516921E92B1DA00607A0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		507516981E92C91000607A0D /* GitHub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHub.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		507516801E92B1DA00607A0D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5075167A1E92B1DA00607A0D = {
+			isa = PBXGroup;
+			children = (
+				507516851E92B1DA00607A0D /* Gogo-Github */,
+				5075169A1E92C92D00607A0D /* Model */,
+				5075169B1E92C98B00607A0D /* View */,
+				5075169C1E92C99500607A0D /* Controller */,
+				507516841E92B1DA00607A0D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		507516841E92B1DA00607A0D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				507516831E92B1DA00607A0D /* Gogo-Github.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		507516851E92B1DA00607A0D /* Gogo-Github */ = {
+			isa = PBXGroup;
+			children = (
+				507516861E92B1DA00607A0D /* AppDelegate.swift */,
+				5075168D1E92B1DA00607A0D /* Assets.xcassets */,
+				507516921E92B1DA00607A0D /* Info.plist */,
+				507516981E92C91000607A0D /* GitHub.swift */,
+			);
+			path = "Gogo-Github";
+			sourceTree = "<group>";
+		};
+		5075169A1E92C92D00607A0D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			path = "Gogo-Github";
+			sourceTree = "<group>";
+		};
+		5075169B1E92C98B00607A0D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5075168F1E92B1DA00607A0D /* LaunchScreen.storyboard */,
+				5075168A1E92B1DA00607A0D /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		5075169C1E92C99500607A0D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				507516881E92B1DA00607A0D /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		507516821E92B1DA00607A0D /* Gogo-Github */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 507516951E92B1DA00607A0D /* Build configuration list for PBXNativeTarget "Gogo-Github" */;
+			buildPhases = (
+				5075167F1E92B1DA00607A0D /* Sources */,
+				507516801E92B1DA00607A0D /* Frameworks */,
+				507516811E92B1DA00607A0D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Gogo-Github";
+			productName = "Gogo-Github";
+			productReference = 507516831E92B1DA00607A0D /* Gogo-Github.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5075167B1E92B1DA00607A0D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Eve Denison";
+				TargetAttributes = {
+					507516821E92B1DA00607A0D = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = UG659HW99G;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 5075167E1E92B1DA00607A0D /* Build configuration list for PBXProject "Gogo-Github" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5075167A1E92B1DA00607A0D;
+			productRefGroup = 507516841E92B1DA00607A0D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				507516821E92B1DA00607A0D /* Gogo-Github */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		507516811E92B1DA00607A0D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				507516911E92B1DA00607A0D /* LaunchScreen.storyboard in Resources */,
+				5075168E1E92B1DA00607A0D /* Assets.xcassets in Resources */,
+				5075168C1E92B1DA00607A0D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5075167F1E92B1DA00607A0D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				507516991E92C91000607A0D /* GitHub.swift in Sources */,
+				507516891E92B1DA00607A0D /* ViewController.swift in Sources */,
+				507516871E92B1DA00607A0D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5075168A1E92B1DA00607A0D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5075168B1E92B1DA00607A0D /* Base */,
+			);
+			name = Main.storyboard;
+			path = "Gogo-Github";
+			sourceTree = "<group>";
+		};
+		5075168F1E92B1DA00607A0D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				507516901E92B1DA00607A0D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			path = "Gogo-Github";
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		507516931E92B1DA00607A0D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		507516941E92B1DA00607A0D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		507516961E92B1DA00607A0D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = UG659HW99G;
+				INFOPLIST_FILE = "Gogo-Github/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.evedenison.Gogo-Github";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		507516971E92B1DA00607A0D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = UG659HW99G;
+				INFOPLIST_FILE = "Gogo-Github/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.evedenison.Gogo-Github";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5075167E1E92B1DA00607A0D /* Build configuration list for PBXProject "Gogo-Github" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				507516931E92B1DA00607A0D /* Debug */,
+				507516941E92B1DA00607A0D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		507516951E92B1DA00607A0D /* Build configuration list for PBXNativeTarget "Gogo-Github" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				507516961E92B1DA00607A0D /* Debug */,
+				507516971E92B1DA00607A0D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5075167B1E92B1DA00607A0D /* Project object */;
+}
