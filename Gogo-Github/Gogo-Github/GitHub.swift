@@ -31,7 +31,7 @@ class GitHub {
             parametersString += "&\(key)=\(value)"
         }
             
-        if let requestURL = URL(string: "\(kOAuthBaseURLString)authorize?client_id=\(gitHubClientID)\(parametersString)") {
+        if let requestURL = URL(string: "\(kOAuthBaseURLString)authorize?client_id=\(gitHubCredentials.shared.gitHubClientID)\(parametersString)") {
             
             print(requestURL.absoluteString)
             

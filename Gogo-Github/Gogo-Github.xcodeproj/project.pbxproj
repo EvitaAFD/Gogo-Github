@@ -27,7 +27,7 @@
 		507516981E92C91000607A0D /* GitHub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHub.swift; sourceTree = "<group>"; };
 		5075169D1E92CE6D00607A0D /* GitHubAuthController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubAuthController.swift; sourceTree = "<group>"; };
 		5075169F1E92EC2700607A0D /* FoundationExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundationExtensions.swift; sourceTree = "<group>"; };
-		50AB00781E92FEE4008072BE /* GitHubCredentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GitHubCredentials.swift; path = "Gogo-Github/GitHubCredentials.swift"; sourceTree = "<group>"; };
+		50AB00781E92FEE4008072BE /* GitHubCredentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubCredentials.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,7 +49,6 @@
 				5075169B1E92C98B00607A0D /* View */,
 				5075169C1E92C99500607A0D /* Controller */,
 				507516841E92B1DA00607A0D /* Products */,
-				50AB00781E92FEE4008072BE /* GitHubCredentials.swift */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,6 +99,7 @@
 		50AB00771E92FCD7008072BE /* Supporting */ = {
 			isa = PBXGroup;
 			children = (
+				50AB00781E92FEE4008072BE /* GitHubCredentials.swift */,
 				507516921E92B1DA00607A0D /* Info.plist */,
 				5075168D1E92B1DA00607A0D /* Assets.xcassets */,
 			);
