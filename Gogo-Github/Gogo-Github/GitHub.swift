@@ -8,6 +8,8 @@
 
 import UIKit
 
+let kOAuthBaseURLString = "https://github.com/login/oauth/"
+
 class GitHub {
 
     let gitHubClientID = "46fedd5f05e0fa84bb6f"
@@ -15,5 +17,20 @@ class GitHub {
     
     static let shared = GitHub()
     
-    
+    func oAuthRequestWith(parameters: [String : String]) {
+        var parametersString = ""
+        
+        for (key, value) in parameters {
+            parametersString += "&\(key)=\(value)"
+        }
+            
+        if let requestURL = URL(string: "\(kOAuthBaseURLString)authorize?client_id=\(gitHubClientID)\(parametersString)") {
+            
+            print(requestURL.absoluteString)
+        
+        }
+    }
 }
+    
+        
+
