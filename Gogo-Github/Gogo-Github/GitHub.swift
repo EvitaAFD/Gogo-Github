@@ -10,7 +10,7 @@ import UIKit
 
 let kOAuthBaseURLString = "https://github.com/login/oauth/"
 
-typealias GitHubOAuthCompletion = (Bool)->()
+typealias GitHubOAuthCompletion = (SaveOptions, Bool)->()
 
 enum GitHubAuthError : Error {
     case extractingCode
@@ -54,7 +54,7 @@ class GitHub {
     
         func complete(success: Bool) {
             OperationQueue.main.addOperation {
-                completion(success)
+                completion(saveOptions, success)
             }
         }
         
@@ -75,7 +75,16 @@ class GitHub {
                     
                     if let dataString = String(data: data, encoding: .utf8) {
                         print(dataString)
-                        complete(success: true)
+                        
+                        let components = dataString.components(separatedBy: "&")
+                        
+                        for component in components {
+                            if component.contains("access_token") {
+                                let accessToken = component.components(separatedBy: "=").last!
+                                complete(success: UserDefaults.standard.save(accessToken: accessToken))
+                            }
+                        }
+                        
                     }
                 }).resume()
             }

@@ -58,6 +58,9 @@
                             <constraint firstItem="SWS-mP-1vM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="zNm-RP-3mu"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="loginButtonHidden" destination="xH7-es-pF6" id="58A-wl-fy3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

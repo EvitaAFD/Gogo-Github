@@ -49,6 +49,7 @@
 				5075169B1E92C98B00607A0D /* View */,
 				5075169C1E92C99500607A0D /* Controller */,
 				507516841E92B1DA00607A0D /* Products */,
+				50AB00771E92FCD7008072BE /* Supporting */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,7 +64,6 @@
 		507516851E92B1DA00607A0D /* Gogo-Github */ = {
 			isa = PBXGroup;
 			children = (
-				50AB00771E92FCD7008072BE /* Supporting */,
 			);
 			path = "Gogo-Github";
 			sourceTree = "<group>";
@@ -104,6 +104,7 @@
 				5075168D1E92B1DA00607A0D /* Assets.xcassets */,
 			);
 			name = Supporting;
+			path = "Gogo-Github";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -10,14 +10,20 @@ import UIKit
 
 class GitHubAuthController: UIViewController {
 
+    @IBOutlet weak var loginButtonHidden: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        if (UserDefaults.standard.getAccessToken() != nil) {
+            loginButtonHidden.isHidden = true
+        }
     }
 
 
     @IBAction func printTokenPressed(_ sender: Any) {
+        
+        print("Print Token Pressed")
         
     }
     
