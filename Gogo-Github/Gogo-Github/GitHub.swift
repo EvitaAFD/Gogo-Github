@@ -113,50 +113,50 @@ class GitHub {
             print (error)
             complete(success: false)
         }
+    }
+    
+    func getRepos(completion: @escaping FetchReposCompletion) {
         
-        func getRepos (completion: @escaping FetchReposCompletion) {
+        func returnToMain(results: [Repository]?) {
+            OperationQueue.main.addOperation {
+                completion(results)
+            }
+        
+        }
+        
+        self.components.path = "/user/repos"
+        
+        guard let url = self.components.url else { returnToMain(results: nil); return }
+        
+        self.session.dataTask(with: url) { (data, response, error) in
             
-            func returnToMain(results: [Repository]?) {
-                OperationQueue.main.addOperation {
-                    completion(results)
+            if error != nil { returnToMain(results: nil); return }
+            
+            if let data = data {
+                
+                var repositories = [Repository]()
+                print(repositories)
+                
+                do {
+                    if let rootJson = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [[String : Any]] {
+                    
+                        for repositoryJson in rootJson {
+                            if let repo = Repository(json: repositoryJson) {
+                                repositories.append(repo)
+                            }
+                        }
+                        returnToMain(results: repositories)
+                    }
+                } catch {
+                
                 }
-            
             }
             
-            self.components.path = "/user/repos"
-            
-            guard let url = self.components.url else { returnToMain(results: nil); return }
-            
-            self.session.dataTask(with: url) { (data, response, error) in
-                
-                if error != nil { returnToMain(results: nil); return }
-                
-                if let data = data {
-                    
-                    var repositories = [Repository]()
-                    print(repositories)
-                    
-                    do {
-                        if let rootJson = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [[String : Any]] {
-                        
-                            for repositoryJson in rootJson {
-                                if let repo = Repository(json: repositoryJson) {
-                                    repositories.append(repo)
-                                }
-                            }
-                            returnToMain(results: repositories)
-                        }
-                    } catch {
-                    
-                    }
-                }
-                
-                
-            }.resume()
-        }
+        }.resume()
+    }
     
     }
-}
+
     
         
 
