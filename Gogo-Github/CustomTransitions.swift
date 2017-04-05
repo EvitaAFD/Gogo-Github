@@ -8,8 +8,8 @@
 
 import UIKit
 
-class CustomTransition: NSObject, UIViewControllerAnimatedTransitioning {
-
+class CustomTransition : NSObject, UIViewControllerAnimatedTransitioning{
+    
     var duration: TimeInterval
     
     init(duration: TimeInterval = 0.5) {
@@ -21,7 +21,7 @@ class CustomTransition: NSObject, UIViewControllerAnimatedTransitioning {
     }
     
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
-        guard let toViewController = transitionContext.viewController(forKey: .to)   else { return }
+        guard let toViewController = transitionContext.viewController(forKey: .to) else { return }
         
         transitionContext.containerView.addSubview(toViewController.view)
         
@@ -32,9 +32,9 @@ class CustomTransition: NSObject, UIViewControllerAnimatedTransitioning {
             toViewController.view.alpha = 1.0
             
         }) { (finished) in
-            
-            transitionContext.completeTransition(true)
+            transitionContext.completeTransition(finished)
         }
+        
     }
-
+    
 }

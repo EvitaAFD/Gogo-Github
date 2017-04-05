@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="156" id="UMJ-CV-BAJ" customClass="RepoNibCell" customModule="Gogo_Github" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="371" height="156"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UMJ-CV-BAJ" id="8hr-QV-xjN">
+                <rect key="frame" x="0.0" y="0.0" width="371" height="155.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Repo Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XWd-y4-VDd">
+                        <rect key="frame" x="8" y="8" width="89" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repo Description" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g23-pZ-II5">
+                        <rect key="frame" x="8" y="35" width="132" height="83"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Repo Language" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MRY-Uh-4DX">
+                        <rect key="frame" x="8" y="126" width="119.5" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="XWd-y4-VDd" firstAttribute="leading" secondItem="8hr-QV-xjN" secondAttribute="leadingMargin" id="2pO-lM-rdR"/>
+                    <constraint firstItem="g23-pZ-II5" firstAttribute="top" secondItem="XWd-y4-VDd" secondAttribute="bottom" constant="6" id="Qkl-sD-s8h"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="MRY-Uh-4DX" secondAttribute="bottom" constant="0.5" id="ViY-BN-Nzz"/>
+                    <constraint firstItem="g23-pZ-II5" firstAttribute="leading" secondItem="8hr-QV-xjN" secondAttribute="leadingMargin" id="r4i-X5-cUp"/>
+                    <constraint firstItem="MRY-Uh-4DX" firstAttribute="top" secondItem="g23-pZ-II5" secondAttribute="bottom" constant="8" id="vTL-r4-rNf"/>
+                    <constraint firstItem="MRY-Uh-4DX" firstAttribute="leading" secondItem="8hr-QV-xjN" secondAttribute="leadingMargin" id="vuF-a7-oSd"/>
+                    <constraint firstItem="XWd-y4-VDd" firstAttribute="top" secondItem="8hr-QV-xjN" secondAttribute="topMargin" id="xWK-E0-y2d"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="repoDescription" destination="g23-pZ-II5" id="AXA-jO-KSr"/>
+                <outlet property="repoLanguage" destination="MRY-Uh-4DX" id="fTI-GZ-a5y"/>
+                <outlet property="repoName" destination="XWd-y4-VDd" id="TPn-FU-g9X"/>
+            </connections>
+            <point key="canvasLocation" x="-19.5" y="67"/>
+        </tableViewCell>
+    </objects>
+</document>

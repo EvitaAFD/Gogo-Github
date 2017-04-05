@@ -37,6 +37,9 @@ class RepoViewController: UIViewController {
         self.repoTableView.rowHeight = UITableViewAutomaticDimension
         
         self.searchBar.delegate = self
+        
+        let repoNibCell = UINib(nibName: RepoNibCell.identifier, bundle: nil)
+        self.repoTableView.register(repoNibCell, forCellReuseIdentifier: RepoNibCell.identifier)
 
         update()
     }
@@ -45,7 +48,6 @@ class RepoViewController: UIViewController {
         print("update repo controller here")
         
         GitHub.shared.getRepos { (repositories) in
-            //update table view
             guard let unwrappedRepos = repositories else { return }
             
             OperationQueue.main.addOperation {
@@ -56,11 +58,9 @@ class RepoViewController: UIViewController {
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
-        
         if segue.identifier == RepoDetailViewController.identifier {
             segue.destination.transitioningDelegate = self as? UIViewControllerTransitioningDelegate
         }
-        
     }
 }
 
@@ -83,11 +83,11 @@ extension RepoViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = repoTableView.dequeueReusableCell(withIdentifier: "repoCell", for: indexPath) as! RepoCell
+        let cell = repoTableView.dequeueReusableCell(withIdentifier: RepoNibCell.identifier, for: indexPath) as! RepoNibCell
         
-        cell.repoName.text = self.repos[indexPath.row].name
+        let repo = self.repos[indexPath.row]
         
-        cell.repoDescription.text = self.repos[indexPath.row].description
+        cell.repo = repo
         
         return cell
     }

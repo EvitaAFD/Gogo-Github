@@ -93,46 +93,6 @@
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </searchBar>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="repoCell" rowHeight="142" id="fPY-v1-RyJ" customClass="RepoCell" customModule="Gogo_Github" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="72" width="343" height="142"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fPY-v1-RyJ" id="1vf-b7-vM4">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="141.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repo Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bAf-CE-Mmp">
-                                                    <rect key="frame" x="0.0" y="0.0" width="343" height="60"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="60" id="0Ok-sw-RbT"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Repo Description" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ntw-ue-3Q8">
-                                                    <rect key="frame" x="0.0" y="60" width="343" height="81.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="Ntw-ue-3Q8" secondAttribute="trailing" id="18Y-oK-mMo"/>
-                                                <constraint firstItem="Ntw-ue-3Q8" firstAttribute="leading" secondItem="1vf-b7-vM4" secondAttribute="leading" id="9rc-Yb-OdN"/>
-                                                <constraint firstItem="bAf-CE-Mmp" firstAttribute="top" secondItem="1vf-b7-vM4" secondAttribute="top" id="bjF-Gc-0gv"/>
-                                                <constraint firstAttribute="trailing" secondItem="bAf-CE-Mmp" secondAttribute="trailing" id="pwO-ML-Aiz"/>
-                                                <constraint firstItem="bAf-CE-Mmp" firstAttribute="leading" secondItem="1vf-b7-vM4" secondAttribute="leading" id="v2N-ax-tce"/>
-                                                <constraint firstItem="Ntw-ue-3Q8" firstAttribute="top" secondItem="bAf-CE-Mmp" secondAttribute="bottom" id="wdF-te-SRe"/>
-                                                <constraint firstAttribute="bottom" secondItem="Ntw-ue-3Q8" secondAttribute="bottom" id="zMn-AZ-o0K"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="repoDescription" destination="Ntw-ue-3Q8" id="x3h-L2-wFb"/>
-                                            <outlet property="repoName" destination="bAf-CE-Mmp" id="j7I-nq-UUO"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -169,7 +129,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hWa-rE-wW0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1791" y="132"/>
+            <point key="canvasLocation" x="1789.5999999999999" y="131.78410794602701"/>
         </scene>
     </scenes>
     <resources>
