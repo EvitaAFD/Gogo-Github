@@ -8,16 +8,23 @@
 
 import UIKit
 
-class RepoViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class RepoViewController: UIViewController {
     
 
     @IBOutlet weak var repoTableView: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!
     
     var repos = [Repository]() {
         didSet {
             self.repoTableView.reloadData()
         }
     
+    }
+    
+    var displayRepos : [Repository]? {
+        didSet {
+            self.repoTableView.reloadData()
+        }
     }
     
     override func viewDidLoad() {
@@ -28,6 +35,8 @@ class RepoViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         self.repoTableView.estimatedRowHeight = 100
         self.repoTableView.rowHeight = UITableViewAutomaticDimension
+        
+        self.searchBar.delegate = self
 
         update()
     }
@@ -43,8 +52,31 @@ class RepoViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 self.repos = unwrappedRepos
             }
         }
-    }
     
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
+        if segue.identifier == RepoDetailViewController.identifier {
+            segue.destination.transitioningDelegate = self as? UIViewControllerTransitioningDelegate
+        }
+        
+    }
+}
+
+
+
+extension RepoViewController: UIViewControllerTransitioningDelegate {
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return CustomTransition(duration: 1.0)
+        
+    }
+
+}
+
+//MARK:
+extension RepoViewController: UITableViewDataSource, UITableViewDelegate {
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return repos.count
     }
@@ -59,7 +91,32 @@ class RepoViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: RepoDetailViewController.identifier, sender: nil)
+    }
 
+}
+
+//MARK: UISearchBarDelegate
+extension RepoViewController: UISearchBarDelegate {
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if let searchedText = searchBar.text {
+            self.displayRepos = self.repos.filter({($0.name?.contains(searchedText))!})
+        }
+        if searchBar.text == "" {
+            self.displayRepos = nil
+        }
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        self.displayRepos = nil
+        self.searchBar.resignFirstResponder()
+    }
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        self.searchBar.resignFirstResponder()
+    }
 }
 
 
