@@ -14,7 +14,11 @@
 		507516991E92C91000607A0D /* GitHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507516981E92C91000607A0D /* GitHub.swift */; };
 		5075169E1E92CE6D00607A0D /* GitHubAuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5075169D1E92CE6D00607A0D /* GitHubAuthController.swift */; };
 		507516A01E92EC2700607A0D /* FoundationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5075169F1E92EC2700607A0D /* FoundationExtensions.swift */; };
+		508EDD6B1E946C4900C1B5EE /* RepoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508EDD6A1E946C4900C1B5EE /* RepoCell.swift */; };
 		50AB00791E92FEE4008072BE /* GitHubCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AB00781E92FEE4008072BE /* GitHubCredentials.swift */; };
+		50FEC6F71E940C0B004DEC7A /* RepoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FEC6F61E940C0B004DEC7A /* RepoViewController.swift */; };
+		50FEC6F91E940D54004DEC7A /* UIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FEC6F81E940D54004DEC7A /* UIExtensions.swift */; };
+		50FEC6FB1E941954004DEC7A /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FEC6FA1E941954004DEC7A /* Repository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +31,11 @@
 		507516981E92C91000607A0D /* GitHub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHub.swift; sourceTree = "<group>"; };
 		5075169D1E92CE6D00607A0D /* GitHubAuthController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubAuthController.swift; sourceTree = "<group>"; };
 		5075169F1E92EC2700607A0D /* FoundationExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundationExtensions.swift; sourceTree = "<group>"; };
+		508EDD6A1E946C4900C1B5EE /* RepoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoCell.swift; sourceTree = "<group>"; };
 		50AB00781E92FEE4008072BE /* GitHubCredentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubCredentials.swift; sourceTree = "<group>"; };
+		50FEC6F61E940C0B004DEC7A /* RepoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoViewController.swift; sourceTree = "<group>"; };
+		50FEC6F81E940D54004DEC7A /* UIExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIExtensions.swift; sourceTree = "<group>"; };
+		50FEC6FA1E941954004DEC7A /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +80,8 @@
 			isa = PBXGroup;
 			children = (
 				507516981E92C91000607A0D /* GitHub.swift */,
+				50FEC6FA1E941954004DEC7A /* Repository.swift */,
+				50FEC6F81E940D54004DEC7A /* UIExtensions.swift */,
 				5075169F1E92EC2700607A0D /* FoundationExtensions.swift */,
 			);
 			name = Model;
@@ -90,6 +100,8 @@
 		5075169C1E92C99500607A0D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				508EDD6A1E946C4900C1B5EE /* RepoCell.swift */,
+				50FEC6F61E940C0B004DEC7A /* RepoViewController.swift */,
 				5075169D1E92CE6D00607A0D /* GitHubAuthController.swift */,
 				507516861E92B1DA00607A0D /* AppDelegate.swift */,
 			);
@@ -181,7 +193,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				507516A01E92EC2700607A0D /* FoundationExtensions.swift in Sources */,
+				50FEC6F91E940D54004DEC7A /* UIExtensions.swift in Sources */,
 				507516991E92C91000607A0D /* GitHub.swift in Sources */,
+				50FEC6FB1E941954004DEC7A /* Repository.swift in Sources */,
+				50FEC6F71E940C0B004DEC7A /* RepoViewController.swift in Sources */,
+				508EDD6B1E946C4900C1B5EE /* RepoCell.swift in Sources */,
 				5075169E1E92CE6D00607A0D /* GitHubAuthController.swift in Sources */,
 				50AB00791E92FEE4008072BE /* GitHubCredentials.swift in Sources */,
 				507516871E92B1DA00607A0D /* AppDelegate.swift in Sources */,
