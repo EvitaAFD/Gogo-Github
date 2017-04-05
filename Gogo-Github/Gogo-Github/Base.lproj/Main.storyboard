@@ -106,7 +106,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Repo Description" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ntw-ue-3Q8">
-                                                    <rect key="frame" x="0.0" y="66" width="343" height="75.5"/>
+                                                    <rect key="frame" x="0.0" y="60" width="343" height="81.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -118,7 +118,7 @@
                                                 <constraint firstItem="bAf-CE-Mmp" firstAttribute="top" secondItem="1vf-b7-vM4" secondAttribute="top" id="bjF-Gc-0gv"/>
                                                 <constraint firstAttribute="trailing" secondItem="bAf-CE-Mmp" secondAttribute="trailing" id="pwO-ML-Aiz"/>
                                                 <constraint firstItem="bAf-CE-Mmp" firstAttribute="leading" secondItem="1vf-b7-vM4" secondAttribute="leading" id="v2N-ax-tce"/>
-                                                <constraint firstItem="Ntw-ue-3Q8" firstAttribute="top" secondItem="bAf-CE-Mmp" secondAttribute="bottom" constant="6" id="wdF-te-SRe"/>
+                                                <constraint firstItem="Ntw-ue-3Q8" firstAttribute="top" secondItem="bAf-CE-Mmp" secondAttribute="bottom" id="wdF-te-SRe"/>
                                                 <constraint firstAttribute="bottom" secondItem="Ntw-ue-3Q8" secondAttribute="bottom" id="zMn-AZ-o0K"/>
                                             </constraints>
                                         </tableViewCellContentView>
