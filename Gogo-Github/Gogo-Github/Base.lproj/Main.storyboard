@@ -53,7 +53,7 @@
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="SWS-mP-1vM" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="7QF-Di-H1C"/>
                             <constraint firstAttribute="trailing" secondItem="xH7-es-pF6" secondAttribute="trailing" id="7x9-rI-xcm"/>
@@ -84,12 +84,67 @@
                     <view key="view" contentMode="scaleToFill" id="7t3-bX-iKL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="142" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xvV-k0-auk">
+                                <rect key="frame" x="16" y="45" width="343" height="577"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="repoCell" rowHeight="142" id="fPY-v1-RyJ" customClass="RepoCell" customModule="Gogo_Github" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="142"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fPY-v1-RyJ" id="1vf-b7-vM4">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="141.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repo Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bAf-CE-Mmp">
+                                                    <rect key="frame" x="0.0" y="0.0" width="343" height="60"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="60" id="0Ok-sw-RbT"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Repo Description" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ntw-ue-3Q8">
+                                                    <rect key="frame" x="0.0" y="66" width="343" height="75.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="Ntw-ue-3Q8" secondAttribute="trailing" id="18Y-oK-mMo"/>
+                                                <constraint firstItem="Ntw-ue-3Q8" firstAttribute="leading" secondItem="1vf-b7-vM4" secondAttribute="leading" id="9rc-Yb-OdN"/>
+                                                <constraint firstItem="bAf-CE-Mmp" firstAttribute="top" secondItem="1vf-b7-vM4" secondAttribute="top" id="bjF-Gc-0gv"/>
+                                                <constraint firstAttribute="trailing" secondItem="bAf-CE-Mmp" secondAttribute="trailing" id="pwO-ML-Aiz"/>
+                                                <constraint firstItem="bAf-CE-Mmp" firstAttribute="leading" secondItem="1vf-b7-vM4" secondAttribute="leading" id="v2N-ax-tce"/>
+                                                <constraint firstItem="Ntw-ue-3Q8" firstAttribute="top" secondItem="bAf-CE-Mmp" secondAttribute="bottom" constant="6" id="wdF-te-SRe"/>
+                                                <constraint firstAttribute="bottom" secondItem="Ntw-ue-3Q8" secondAttribute="bottom" id="zMn-AZ-o0K"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="repoDescription" destination="Ntw-ue-3Q8" id="x3h-L2-wFb"/>
+                                            <outlet property="repoName" destination="bAf-CE-Mmp" id="j7I-nq-UUO"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xvV-k0-auk" firstAttribute="leading" secondItem="7t3-bX-iKL" secondAttribute="leadingMargin" id="Yh3-GP-Efu"/>
+                            <constraint firstItem="xvV-k0-auk" firstAttribute="top" secondItem="AwY-9y-TgE" secondAttribute="bottom" constant="25" id="nvz-Cz-vpi"/>
+                            <constraint firstItem="xvV-k0-auk" firstAttribute="centerY" secondItem="7t3-bX-iKL" secondAttribute="centerY" id="pha-Gd-dcP"/>
+                            <constraint firstItem="xvV-k0-auk" firstAttribute="trailing" secondItem="7t3-bX-iKL" secondAttribute="trailingMargin" id="tyN-vD-kgD"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="repoTableView" destination="xvV-k0-auk" id="BEj-c5-s90"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aRF-Id-M2z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="990" y="137"/>
+            <point key="canvasLocation" x="989.60000000000002" y="136.28185907046478"/>
         </scene>
     </scenes>
     <resources>
