@@ -165,14 +165,14 @@
                                 <rect key="frame" x="16" y="601" width="76" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Cancel">
-                                    <color key="titleColor" red="0.40000000600000002" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="E4a-PR-ssI" kind="show" id="4l6-P0-LFA"/>
+                                    <action selector="cancelButton:" destination="aBw-57-pBv" eventType="touchUpInside" id="RFK-eZ-HZ5"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.82334958514446899" green="0.87788829761582843" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Y0t-PA-3bX" firstAttribute="top" secondItem="fH8-YI-Lmf" secondAttribute="bottom" constant="12" id="29Y-xD-fxU"/>
                             <constraint firstItem="b6r-M4-7MO" firstAttribute="top" secondItem="Y0t-PA-3bX" secondAttribute="bottom" constant="8" id="2lO-8e-JFO"/>

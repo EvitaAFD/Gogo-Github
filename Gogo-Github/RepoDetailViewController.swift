@@ -18,6 +18,10 @@ class RepoDetailViewController: UIViewController {
     @IBOutlet weak var repoDetailForked: UILabel!
     @IBOutlet weak var repoDetailDateCreated: UILabel!
     
+    @IBAction func cancelButton(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+        dismiss(animated: true, completion: nil)
+    }
     
     var repo : Repository! 
 
