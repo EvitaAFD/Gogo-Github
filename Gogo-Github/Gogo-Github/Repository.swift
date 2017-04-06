@@ -11,13 +11,20 @@ import Foundation
 
 class Repository {
 
-    let name: String?
-    let description: String?
-    let language: String?
+    let name : String?
+    let description : String?
+    let language : String?
+    let numberStars : String?
+    let createdDate : String?
+    let forked : Bool?
     
-    init?(json: [String: Any]) {
-        self.name = json["name"] as? String
-        self.description = json["description"] as? String
-        self.language = json["language"] as? String
+    init?(json: [String : Any]) {
+        self.name = json["name"] as? String ?? "Repo has no name."
+        self.description = json["description"] as? String ?? "No description available"
+        self.language = json["language"] as? String ?? "Language not defined."
+        self.numberStars = json["stargazers_count"] as? String ?? "No stars on this repo"
+        self.createdDate = (json["created_at"] as? String)?.components(separatedBy: "T").first
+        self.forked = json["fork"] as? Bool
+        
     }
 }
