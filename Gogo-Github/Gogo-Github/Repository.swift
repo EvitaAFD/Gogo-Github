@@ -14,10 +14,17 @@ class Repository {
     let name: String?
     let description: String?
     let language: String?
+    let numberStars: String?
+    let isForked: Bool?
     
     init?(json: [String: Any]) {
         self.name = json["name"] as? String
         self.description = json["description"] as? String
         self.language = json["language"] as? String
+        self.numberStars = json["stargazers_count"] as? String
+        self.isForked = json["fork"] as? Bool
+       
+        
+        
     }
 }

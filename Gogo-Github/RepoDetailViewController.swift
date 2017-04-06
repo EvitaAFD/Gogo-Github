@@ -9,6 +9,18 @@
 import UIKit
 
 class RepoDetailViewController: UIViewController {
+    
+    
+    var repo : Repository? {
+        didSet {
+//            self.repoName.text = repo?.name
+//            self.repoDescription.text = repo?.description
+//            self.repoLanguage.text = repo?.language
+            //            self.isForked.text = repo?.isForked
+            //
+        }
+        
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
