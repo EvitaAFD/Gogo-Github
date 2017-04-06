@@ -26,7 +26,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repo Description" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g23-pZ-II5">
-                        <rect key="frame" x="8" y="35" width="132" height="83"/>
+                        <rect key="frame" x="8" y="35" width="355" height="83"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -40,6 +40,7 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="XWd-y4-VDd" firstAttribute="leading" secondItem="8hr-QV-xjN" secondAttribute="leadingMargin" id="2pO-lM-rdR"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="g23-pZ-II5" secondAttribute="trailing" id="3J4-VA-Y7u"/>
                     <constraint firstItem="g23-pZ-II5" firstAttribute="top" secondItem="XWd-y4-VDd" secondAttribute="bottom" constant="6" id="Qkl-sD-s8h"/>
                     <constraint firstAttribute="bottomMargin" secondItem="MRY-Uh-4DX" secondAttribute="bottom" constant="0.5" id="ViY-BN-Nzz"/>
                     <constraint firstItem="g23-pZ-II5" firstAttribute="leading" secondItem="8hr-QV-xjN" secondAttribute="leadingMargin" id="r4i-X5-cUp"/>

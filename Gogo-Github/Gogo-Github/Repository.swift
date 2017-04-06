@@ -11,20 +11,20 @@ import Foundation
 
 class Repository {
 
-    let name: String?
-    let description: String?
-    let language: String?
-    let numberStars: String?
-    let isForked: Bool?
+    let name : String?
+    let description : String?
+    let language : String?
+    let numberStars : String?
+    let createdDate : String?
+    let forked : Bool?
     
-    init?(json: [String: Any]) {
-        self.name = json["name"] as? String
-        self.description = json["description"] as? String
-        self.language = json["language"] as? String
-        self.numberStars = json["stargazers_count"] as? String
-        self.isForked = json["fork"] as? Bool
-       
-        
+    init?(json: [String : Any]) {
+        self.name = json["name"] as? String ?? "No name"
+        self.description = json["description"] as? String ?? "No description"
+        self.language = json["language"] as? String ?? "Undefined language"
+        self.numberStars = json["stargazers_count"] as? String ?? "No Stars"
+        self.createdDate = (json["created_at"] as? String)?.components(separatedBy: "T").first
+        self.forked = json["fork"] as? Bool
         
     }
 }

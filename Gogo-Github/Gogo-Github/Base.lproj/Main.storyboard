@@ -131,8 +131,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Detail Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CUs-bh-0yX">
-                                <rect key="frame" x="16" y="56.5" width="136" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Detail Description" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CUs-bh-0yX">
+                                <rect key="frame" x="16" y="56.5" width="343" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -155,12 +155,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OwS-LK-gzF">
+                                <rect key="frame" x="16" y="176" width="36" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Y0t-PA-3bX" firstAttribute="top" secondItem="fH8-YI-Lmf" secondAttribute="bottom" constant="12" id="29Y-xD-fxU"/>
                             <constraint firstItem="b6r-M4-7MO" firstAttribute="top" secondItem="Y0t-PA-3bX" secondAttribute="bottom" constant="8" id="2lO-8e-JFO"/>
                             <constraint firstItem="CUs-bh-0yX" firstAttribute="top" secondItem="Sxh-VX-tYB" secondAttribute="bottom" constant="8" id="8Iy-3V-jqc"/>
+                            <constraint firstItem="OwS-LK-gzF" firstAttribute="top" secondItem="b6r-M4-7MO" secondAttribute="bottom" constant="8" id="AcR-js-UAX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="CUs-bh-0yX" secondAttribute="trailing" id="HHZ-Uf-JtY"/>
                             <constraint firstItem="CUs-bh-0yX" firstAttribute="top" secondItem="Sxh-VX-tYB" secondAttribute="bottom" constant="8" id="Hgi-Ht-79z"/>
                             <constraint firstItem="Sxh-VX-tYB" firstAttribute="leading" secondItem="t99-1u-s36" secondAttribute="leadingMargin" id="KGO-EH-fJI"/>
                             <constraint firstItem="fH8-YI-Lmf" firstAttribute="leading" secondItem="t99-1u-s36" secondAttribute="leadingMargin" id="XMi-hH-Kj3"/>
@@ -169,11 +177,21 @@
                             <constraint firstItem="Y0t-PA-3bX" firstAttribute="leading" secondItem="t99-1u-s36" secondAttribute="leadingMargin" id="drd-il-dXi"/>
                             <constraint firstItem="fH8-YI-Lmf" firstAttribute="top" secondItem="CUs-bh-0yX" secondAttribute="bottom" constant="8" id="eUV-TU-BR6"/>
                             <constraint firstItem="CUs-bh-0yX" firstAttribute="leading" secondItem="t99-1u-s36" secondAttribute="leadingMargin" id="fPu-O6-GcT"/>
+                            <constraint firstItem="OwS-LK-gzF" firstAttribute="leading" secondItem="t99-1u-s36" secondAttribute="leadingMargin" id="jc0-RK-UUH"/>
                             <constraint firstItem="fH8-YI-Lmf" firstAttribute="top" secondItem="CUs-bh-0yX" secondAttribute="bottom" constant="8" id="kgz-N1-Oux"/>
                             <constraint firstItem="3YD-yX-6fn" firstAttribute="top" secondItem="b6r-M4-7MO" secondAttribute="bottom" constant="499" id="nbT-Or-xFX"/>
                             <constraint firstItem="Sxh-VX-tYB" firstAttribute="top" secondItem="ceQ-lL-cLI" secondAttribute="bottom" constant="8" id="sK9-xa-bw7"/>
+                            <constraint firstItem="3YD-yX-6fn" firstAttribute="top" secondItem="OwS-LK-gzF" secondAttribute="bottom" constant="468" id="z5C-JC-RHS"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="repoDetailDateCreated" destination="OwS-LK-gzF" id="X1W-Nd-6dP"/>
+                        <outlet property="repoDetailDescription" destination="CUs-bh-0yX" id="0LF-s5-iTP"/>
+                        <outlet property="repoDetailForked" destination="b6r-M4-7MO" id="coQ-ch-VdT"/>
+                        <outlet property="repoDetailLanguage" destination="fH8-YI-Lmf" id="qqu-zP-0Xu"/>
+                        <outlet property="repoDetailName" destination="Sxh-VX-tYB" id="fPb-tC-RmO"/>
+                        <outlet property="repoDetailStars" destination="Y0t-PA-3bX" id="J9a-Pi-fFf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hWa-rE-wW0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

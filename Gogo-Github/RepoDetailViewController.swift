@@ -11,21 +11,31 @@ import UIKit
 class RepoDetailViewController: UIViewController {
     
     
-    var repo : Repository? {
-        didSet {
-//            self.repoName.text = repo?.name
-//            self.repoDescription.text = repo?.description
-//            self.repoLanguage.text = repo?.language
-            //            self.isForked.text = repo?.isForked
-            //
-        }
-        
-    }
+    @IBOutlet weak var repoDetailName: UILabel!
+    @IBOutlet weak var repoDetailDescription: UILabel!
+    @IBOutlet weak var repoDetailLanguage: UILabel!
+    @IBOutlet weak var repoDetailStars: UILabel!
+    @IBOutlet weak var repoDetailForked: UILabel!
+    @IBOutlet weak var repoDetailDateCreated: UILabel!
+    
+    
+    var repo : Repository! 
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        self.repoDetailName.text = repo.name
+        self.repoDetailDescription.text = repo.description
+        self.repoDetailLanguage.text = repo.language
+        self.repoDetailStars.text = repo.numberStars
+        if repo.forked! {
+            self.repoDetailForked.isHidden = false
+        } else {
+            self.repoDetailForked.isHidden = true
+        }
+        self.repoDetailDateCreated.text = repo.createdDate
+        
     }
 
 }
