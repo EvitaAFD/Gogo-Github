@@ -45,7 +45,6 @@ class RepoViewController: UIViewController {
     }
     
     func update() {
-        print("update repo controller here")
         
         GitHub.shared.getRepos { (repositories) in
             guard let unwrappedRepos = repositories else { return }
@@ -73,7 +72,7 @@ class RepoViewController: UIViewController {
 }
 
 
-
+//MARK: UIViewControllerTransitionDelegate
 extension RepoViewController: UIViewControllerTransitioningDelegate {
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         return CustomTransition(duration: 1.0)

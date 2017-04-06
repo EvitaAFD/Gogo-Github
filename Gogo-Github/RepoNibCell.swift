@@ -18,9 +18,7 @@ class RepoNibCell: UITableViewCell {
         didSet {
             self.repoName.text = repo?.name
             self.repoDescription.text = repo?.description
-            self.repoLanguage.text = repo?.language
-//            self.isForked.text = repo?.isForked
-//        
+            self.repoLanguage.text = repo?.language       
         }
     
     }

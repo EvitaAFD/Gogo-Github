@@ -19,10 +19,10 @@ class Repository {
     let forked : Bool?
     
     init?(json: [String : Any]) {
-        self.name = json["name"] as? String ?? "No name"
-        self.description = json["description"] as? String ?? "No description"
-        self.language = json["language"] as? String ?? "Undefined language"
-        self.numberStars = json["stargazers_count"] as? String ?? "No Stars"
+        self.name = json["name"] as? String ?? "Repo has no name."
+        self.description = json["description"] as? String ?? "No description available"
+        self.language = json["language"] as? String ?? "Language not defined."
+        self.numberStars = json["stargazers_count"] as? String ?? "No stars on this repo"
         self.createdDate = (json["created_at"] as? String)?.components(separatedBy: "T").first
         self.forked = json["fork"] as? Bool
         
