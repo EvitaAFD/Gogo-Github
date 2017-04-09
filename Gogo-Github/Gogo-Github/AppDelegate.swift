@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         if let token = UserDefaults.standard.getAccessToken() {
-            print(token)
+            print("Here is the token: \(token)")
         } else {
             presentAuthController()
         }
