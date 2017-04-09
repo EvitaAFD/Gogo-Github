@@ -46,6 +46,8 @@ class RepoDetailViewController: UIViewController {
     @IBAction func moreDetailsPressed(_ sender: Any) {
         guard let repo = repo else { return }
         
+//        presentWebViewControllerWith(urlString: repo.repoUrlString)
+        
         presentSafariViewConttoller(urlString: repo.repoUrlString)
     }
     
@@ -54,8 +56,52 @@ class RepoDetailViewController: UIViewController {
         guard let url = URL(string: urlString) else { return }
         
         let safariController = SFSafariViewController(url: url)
-        
         self.present(safariController, animated: true, completion: nil)
+    }
+    
+    func presentWebViewControllerWith(urlString: String) {
+        
+        let webController = WebViewController()
+        webController.url = urlString
+        
+        self.present(webController, animated: true, completion: nil)
     }
 
 }
+
+//Add border features, dev Axel Guilmin
+
+@IBDesignable extension UIView {
+    @IBInspectable var borderColor:UIColor? {
+        set {
+            layer.borderColor = newValue!.cgColor
+        }
+       
+        get {
+            if let color = layer.borderColor {
+                return UIColor(cgColor:color)
+            }
+            else {
+                return nil
+            }
+        }
+    }
+    @IBInspectable var borderWidth:CGFloat {
+        set {
+            layer.borderWidth = newValue
+        }
+        get {
+            return layer.borderWidth
+        }
+    }
+    @IBInspectable var cornerRadius:CGFloat {
+        set {
+            layer.cornerRadius = newValue
+            clipsToBounds = newValue > 0
+        }
+        get {
+            return layer.cornerRadius
+        }
+    }
+}
+

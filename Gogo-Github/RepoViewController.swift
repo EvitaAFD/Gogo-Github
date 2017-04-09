@@ -58,7 +58,7 @@ class RepoViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
         if segue.identifier == RepoDetailViewController.identifier {
-            segue.destination.transitioningDelegate = self as? UIViewControllerTransitioningDelegate
+            segue.destination.transitioningDelegate = self
             
             if let selectedRow = self.repoTableView.indexPathForSelectedRow?.row{
                 let selectedRepo = self.repos[selectedRow]
@@ -85,14 +85,14 @@ extension RepoViewController: UIViewControllerTransitioningDelegate {
 extension RepoViewController: UITableViewDataSource, UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return repos.count
+        return self.displayRepos?.count ?? self.repos.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = repoTableView.dequeueReusableCell(withIdentifier: RepoNibCell.identifier, for: indexPath) as! RepoNibCell
         
-        let repo = self.repos[indexPath.row]
+        let repo = self.displayRepos?[indexPath.row] ?? self.repos[indexPath.row]
         
         cell.repo = repo
         
@@ -109,8 +109,16 @@ extension RepoViewController: UITableViewDataSource, UITableViewDelegate {
 extension RepoViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        if !searchText.validate() {
+            let lastIndex = searchText.index(before: searchText.endIndex)
+            
+            searchBar.text = searchText.substring(to: lastIndex)
+        }
+        
         if let searchedText = searchBar.text {
-            self.displayRepos = self.repos.filter({($0.name?.contains(searchedText))!})
+            self.displayRepos = self.repos.filter({$0.name.lowercased().contains(searchedText.lowercased())})
+            self.displayRepos = self.repos.filter({$0.language.lowercased().contains(searchedText.lowercased())})
         }
         if searchBar.text == "" {
             self.displayRepos = nil
