@@ -118,6 +118,7 @@ extension RepoViewController: UISearchBarDelegate {
         
         if let searchedText = searchBar.text {
             self.displayRepos = self.repos.filter({$0.name.lowercased().contains(searchedText.lowercased())})
+            self.displayRepos = self.repos.filter({$0.language.lowercased().contains(searchedText.lowercased())})
         }
         if searchBar.text == "" {
             self.displayRepos = nil

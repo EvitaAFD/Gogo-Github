@@ -13,7 +13,7 @@ class Repository {
 
     let name : String
     let description : String?
-    let language : String?
+    let language : String
     let numberStars : String?
     let createdDate : String?
     let forked : Bool?
