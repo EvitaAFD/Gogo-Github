@@ -135,7 +135,6 @@ class GitHub {
             if let data = data {
                 
                 var repositories = [Repository]()
-                print(repositories)
                 
                 do {
                     if let rootJson = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [[String : Any]] {
