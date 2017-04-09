@@ -36,16 +36,6 @@
                                     <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dy2-RK-Ic0"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SWS-mP-1vM">
-                                <rect key="frame" x="16" y="526" width="343" height="30"/>
-                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="PRINT TOKEN">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="printTokenPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ypt-Ex-PwC"/>
-                                </connections>
-                            </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="github_logo_2x" translatesAutoresizingMaskIntoConstraints="NO" id="lPm-lT-c4a">
                                 <rect key="frame" x="87" y="233.5" width="200" height="200"/>
                                 <constraints>
@@ -56,14 +46,11 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="SWS-mP-1vM" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="7QF-Di-H1C"/>
                             <constraint firstAttribute="trailing" secondItem="xH7-es-pF6" secondAttribute="trailing" id="7x9-rI-xcm"/>
                             <constraint firstItem="xH7-es-pF6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="DAu-7p-Tg8"/>
                             <constraint firstItem="lPm-lT-c4a" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="JVa-ch-lc8"/>
                             <constraint firstItem="lPm-lT-c4a" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KXT-zc-VGZ"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xH7-es-pF6" secondAttribute="bottom" constant="20" id="PBo-E1-kMo"/>
-                            <constraint firstItem="xH7-es-pF6" firstAttribute="top" secondItem="SWS-mP-1vM" secondAttribute="bottom" constant="16" id="raU-qR-pkw"/>
-                            <constraint firstItem="SWS-mP-1vM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="wql-RC-OQw"/>
                         </constraints>
                     </view>
                     <connections>
@@ -126,12 +113,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="Repo Detail Name " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sxh-VX-tYB">
-                                <rect key="frame" x="16" y="38" width="193" height="34"/>
-                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="22"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Detail Description" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CUs-bh-0yX">
                                 <rect key="frame" x="16" y="76" width="343" height="20"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
@@ -191,7 +172,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UW7-MT-WZc">
-                                <rect key="frame" x="299" y="20" width="76" height="30"/>
+                                <rect key="frame" x="327" y="20" width="48" height="30"/>
                                 <state key="normal" title="Cancel">
                                     <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -199,12 +180,18 @@
                                     <action selector="cancelButton:" destination="aBw-57-pBv" eventType="touchUpInside" id="RFK-eZ-HZ5"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="Repo Detail Name " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sxh-VX-tYB">
+                                <rect key="frame" x="0.0" y="46" width="375" height="34"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.82334958514446899" green="0.87788829761582843" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.9105010502142552" green="0.93264305395033253" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="UW7-MT-WZc" secondAttribute="trailing" id="1sg-VE-SMN"/>
-                            <constraint firstItem="CUs-bh-0yX" firstAttribute="top" secondItem="Sxh-VX-tYB" secondAttribute="bottom" constant="4" id="AGz-qB-F9U"/>
                             <constraint firstItem="81I-md-ZYT" firstAttribute="centerX" secondItem="t99-1u-s36" secondAttribute="centerX" id="Asb-ko-Feq"/>
+                            <constraint firstItem="TZY-gk-afU" firstAttribute="top" secondItem="Sxh-VX-tYB" secondAttribute="bottom" constant="76" id="BS3-qe-TmL"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Y0t-PA-3bX" secondAttribute="trailing" constant="35" id="Bai-9v-Azf"/>
                             <constraint firstItem="Y0t-PA-3bX" firstAttribute="top" secondItem="fH8-YI-Lmf" secondAttribute="bottom" constant="6" id="CFf-8y-uSw"/>
                             <constraint firstItem="b6r-M4-7MO" firstAttribute="top" secondItem="Y0t-PA-3bX" secondAttribute="bottom" constant="6" id="Ggo-FV-SmD"/>
@@ -213,24 +200,24 @@
                             <constraint firstItem="FBO-D4-iDv" firstAttribute="leading" secondItem="OwS-LK-gzF" secondAttribute="leading" id="NND-be-3JG"/>
                             <constraint firstItem="fH8-YI-Lmf" firstAttribute="firstBaseline" secondItem="TZY-gk-afU" secondAttribute="firstBaseline" id="PGi-Bl-TEz"/>
                             <constraint firstItem="Y0t-PA-3bX" firstAttribute="leading" secondItem="iEf-HM-En4" secondAttribute="trailing" constant="53" id="QYq-xQ-XMp"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Sxh-VX-tYB" secondAttribute="trailing" constant="150" id="R5e-aR-tcM"/>
                             <constraint firstItem="UW7-MT-WZc" firstAttribute="top" secondItem="ceQ-lL-cLI" secondAttribute="bottom" id="S3y-wh-k9V"/>
                             <constraint firstItem="iEf-HM-En4" firstAttribute="top" secondItem="TZY-gk-afU" secondAttribute="bottom" constant="6" id="TUJ-cC-nkd"/>
                             <constraint firstItem="TZY-gk-afU" firstAttribute="top" secondItem="CUs-bh-0yX" secondAttribute="bottom" constant="60" id="UuJ-s1-DWJ"/>
+                            <constraint firstItem="Sxh-VX-tYB" firstAttribute="leading" secondItem="t99-1u-s36" secondAttribute="leading" id="WKq-VJ-yV5"/>
                             <constraint firstItem="81I-md-ZYT" firstAttribute="centerY" secondItem="t99-1u-s36" secondAttribute="centerY" id="Ytp-VR-gYd"/>
                             <constraint firstItem="iEf-HM-En4" firstAttribute="top" secondItem="TZY-gk-afU" secondAttribute="bottom" constant="6" id="Yxs-a4-UgL"/>
-                            <constraint firstItem="Sxh-VX-tYB" firstAttribute="leading" secondItem="t99-1u-s36" secondAttribute="leadingMargin" id="ZL4-GY-yzO"/>
                             <constraint firstItem="CUs-bh-0yX" firstAttribute="trailing" secondItem="t99-1u-s36" secondAttribute="trailingMargin" id="ZSg-p6-gkv"/>
                             <constraint firstItem="81I-md-ZYT" firstAttribute="centerY" secondItem="t99-1u-s36" secondAttribute="centerY" id="aRQ-Ew-mAf"/>
                             <constraint firstItem="CUs-bh-0yX" firstAttribute="top" secondItem="UW7-MT-WZc" secondAttribute="bottom" constant="26" id="bXT-DX-I34"/>
                             <constraint firstItem="TZY-gk-afU" firstAttribute="leading" secondItem="t99-1u-s36" secondAttribute="leadingMargin" id="fi7-Ei-pJA"/>
                             <constraint firstItem="b6r-M4-7MO" firstAttribute="leading" secondItem="FBO-D4-iDv" secondAttribute="trailing" constant="42" id="gSN-uS-SJi"/>
+                            <constraint firstItem="Sxh-VX-tYB" firstAttribute="top" secondItem="ceQ-lL-cLI" secondAttribute="bottom" constant="26" id="hsR-mc-hfP"/>
                             <constraint firstItem="81I-md-ZYT" firstAttribute="centerY" secondItem="t99-1u-s36" secondAttribute="centerY" id="la5-Xc-mr3"/>
                             <constraint firstItem="OwS-LK-gzF" firstAttribute="top" secondItem="FBO-D4-iDv" secondAttribute="bottom" constant="14" id="mbJ-hQ-oBW"/>
                             <constraint firstItem="CUs-bh-0yX" firstAttribute="leading" secondItem="t99-1u-s36" secondAttribute="leadingMargin" id="qVx-ON-7PH"/>
                             <constraint firstItem="iEf-HM-En4" firstAttribute="leading" secondItem="t99-1u-s36" secondAttribute="leadingMargin" id="uAj-7a-2a5"/>
+                            <constraint firstAttribute="trailing" secondItem="Sxh-VX-tYB" secondAttribute="trailing" id="wZj-f3-BV3"/>
                             <constraint firstItem="fH8-YI-Lmf" firstAttribute="leading" secondItem="TZY-gk-afU" secondAttribute="trailing" constant="30" id="zFt-QG-91c"/>
-                            <constraint firstItem="UW7-MT-WZc" firstAttribute="leading" secondItem="Sxh-VX-tYB" secondAttribute="trailing" constant="90" id="znJ-F7-nQf"/>
                         </constraints>
                     </view>
                     <connections>
